@@ -1,0 +1,103 @@
+.container {
+    background: beige;
+    height: 100vh;
+    
+    /* 이하 flexbox 설정 */
+    display: flex; /* flexbox 선언 */
+    
+    /*flex-direction: row;*/ /* 중심축을 수평으로 기본값 : 왼쪽에서 오른쪽으로 */
+    /*flex-direction: row-reverse;*/ /* 오른쪽에서 왼쪽으로 */
+    /*flex-direction: column;*/ /* 중심축을 수직으로 기본값 : 위에서 아래 방향으로 */
+    /*flex-direction: column-reverse;*/ /* 중심축을 수직으로 아래에서 위로 */
+    
+    /*flex-wrap: nowrap;*/ /*기본값. 아이템이 많아도 한줄에 다 표시한다. */
+    /*flex-wrap: wrap;*/ /* 아이템이 한줄에 다차면 다음라인으로 표시된다. */
+    /*flex-wrap: wrap-reverse;*/ /* 아래서 부터 위로 wrapping 된다. */
+    /*flex-flow: column nowrap;*/ /* flex-direction, flow-wrap을 합한 기능 */
+
+    /* justify-content는 중심축에서 아이템을 어떻게 배치하는지 결정한다. */
+    /* justify-content: flex-start; */ /* 아이템 배치설정. 기본값. 기준축이 수평일 경우 왼쪽에서 오른쪽, 기준축이 수직일 경우 위에서 아래쪽 */
+    /* justify-content: flex-end; */ /* 기준축이 수평일 경우 오른쪽에서 왼쪽으로. 기준축이 수직일 경우 아래에서 위로 */
+        /* column-reverse, flex-end 차이점 : flex-direction이 column-reverse일 경우 아이템의 순서도 변경되나, 기준축이 수직인 flex-end는 아이템의 순서는 유지 한채 아래로 이동한다. */
+    /* justify-content: center; */ /* 아이템 중앙 정렬 */
+    /* justify-content: space-around; */ /* 아이템 박스를 둘러싸게 스페이스를 넣어준다. 시작 박스와 맨마지막 박스는 하나의 박스 스페이스만 가지지만, 가운데 있는 박스들은 그 전 박스의 스페이지 와 그다음 박스의 스페이스 까지 가진다. */
+    /* justify-content: space-evenly; */ /* 똑같은 스페이스 간격을 가지게 한다. */
+    /* justify-content: space-between; */ /* 시작과 끝 박스만 화면에 맞게 배치 하고, 중간에 아이템을 균등하게 배치하는 방식 */
+
+    /* align-items는 교차축에서 아이템을 배치하는 방법을 설정한다. */
+    /* align-items: center; */ /* 교차축에서 아이템을 배치하는 방법을 설정한다. */
+    /* align-items: baseline; */ /* 아이템 높이와 상관없이, 텍스트 기준(baseline)으로 높이를 조정하여 배치한다. */
+    /* align-content: space-between; */ /* 교차축 기준으로 시작과 끝을 화면에 맞게 배치하고, 중간에 아이템을 균등하게 배치한다. */
+    /* align-content: center; */ /* 교차축을 기준으로 중간으로 아이템이 모아 배치한다. */
+}
+
+.item {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black; /* border-width, border-style, border-color를 한번에 지정한다. */
+}
+
+.item1 {
+    background: #ef9a9a;
+
+    /* flex-box 아이템 속성 */
+    order: 2; /* 아이템의 표시 순서를 변경한다. */
+    /* 컨테이너가 늘어날 경우 아이템 길이 변화 */
+    /* flex-grow: 2; */ /* 2번 항목 보다 2배로 늘어 난다. */
+    /* 컨테이너가 줄어들 경우 아이템 길이 변화 */
+    /* flex-shrink: 2; */ /* 2번 항목 보다 2배로 줄어든다. */
+
+    /* flex-basis: auto; */ /* 기본값 grow나 shrink에 지정된것에 따라 변경된다. */
+    /* flex-basis: 60%; */ /* flex-grow, flex-shrink가 없을 시 정해진 % 비율로 변경된다. */
+
+    flex: 2 2 auto; /* grow, shrink, basis */
+
+    /* 아이템별 정렬 */
+    align-self: center;
+}
+
+.item2 {
+    background: #f48fb1;
+    order: 1;
+    /* flex-grow: 1; */ /* 컨테이너가 늘어남에 따라 정배로 늘어 된다. */
+    /* flex-shrink: 1; */ /* 컨테이너가 줄어듬에 따라 정배로 줄어든다. */
+
+    /* flex-basis: 30%; */
+}
+
+.item3 {
+    background: #ce93d8;
+    order: 3;
+    /* flex-grow: 0; */ /* 기본값 : 컨테이너가 늘어도 변경되지 않는다. */
+    /* flex-shrink: 0; */ /* 기본값 : 컨테이너가 줄어도 원래사이즈가 유지 되다 줄어든다. */
+
+    /* flex-basis: 10%; */
+}
+
+.item4 {
+    background: #b39ddb;
+}
+
+.item5 {
+    background: #90caf9;
+}
+
+.item6 {
+    background: #a5d6a7;
+}
+
+.item7 {
+    background: #e6ee9c;
+}
+
+.item8 {
+    background: #66bb6a;
+}
+
+.item9 {
+    background: #039be5;
+}
+
+.item10 {
+    background: #5c6bc0;
+}
